@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>VJApp : The 'Back-To-Basics' VJing Software</title>
+
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/bootstrap/js/popover.js"></script>
+
+
+  <script src="js/controller.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="controller">
+
+    <div ng-repeat="slide in slides" class='container-fluid'>
+      <div ng-include="slide.slide" class='fill' id='{{slide.id}}' style='background-image:url(images/patterns/pattern2.png), url({{slide.image}});' onload=""></div>
+    </div>
+
+
+
+
+</body>
+</html>
